@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowset</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ── Header ─────────────────────────── -->
+  <header class="header">
+    <div class="header-left">
+      <span class="header-logo">🚀</span>
+      <h1 class="header-title">Flowset</h1>
+    </div>
+    <button class="btn btn-primary" id="btn-new-profile">
+      <span class="btn-icon">＋</span> New Profile
+    </button>
+  </header>
+
+  <!-- ── Stats Bar ──────────────────────── -->
+  <section class="stats-bar" id="stats-bar">
+    <div class="stat">
+      <span class="stat-value" id="stat-profiles">0</span>
+      <span class="stat-label">Profiles</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="stat-apps">0</span>
+      <span class="stat-label">Apps</span>
+    </div>
+    <div class="stat">
+      <span class="stat-value" id="stat-launches">0</span>
+      <span class="stat-label">Launches</span>
+    </div>
+  </section>
+
+  <!-- ── Empty State ────────────────────── -->
+  <section class="empty-state" id="empty-state">
+    <div class="empty-illustration">
+      <span class="empty-rocket">🚀</span>
+      <div class="empty-orbits">
+        <span class="orbit-dot" style="--delay:0s;--size:120px">⚡</span>
+        <span class="orbit-dot" style="--delay:1s;--size:160px">💻</span>
+        <span class="orbit-dot" style="--delay:2s;--size:200px">🎮</span>
+      </div>
+    </div>
+    <h2 class="empty-title">No profiles yet</h2>
+    <p class="empty-text">Create your first profile to group and launch your favorite apps in one click.</p>
+    <button class="btn btn-primary btn-lg" id="btn-empty-create">
+      <span class="btn-icon">＋</span> Create First Profile
+    </button>
+  </section>
+
+  <!-- ── Profiles Grid ──────────────────── -->
+  <section class="profiles-grid" id="profiles-grid"></section>
+
+  <!-- ── Profile Modal ──────────────────── -->
+  <div class="modal-overlay" id="modal-profile">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-profile-title">New Profile</h2>
+        <button class="modal-close" id="modal-profile-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Profile Name</label>
+          <input type="text" class="form-input" id="input-name" placeholder="e.g. Work, Gaming, Creative…" maxlength="40">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Description</label>
+          <input type="text" class="form-input" id="input-desc" placeholder="Short description (optional)" maxlength="80">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Emoji</label>
+          <div class="emoji-grid" id="emoji-grid"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Accent Color</label>
+          <div class="color-picker" id="color-picker"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Apps</label>
+          <div class="apps-list" id="apps-list"></div>
+          <button class="btn btn-outline btn-sm" id="btn-add-app">
+            <span class="btn-icon">＋</span> Add App
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" id="btn-delete-profile">Delete</button>
+        <div class="modal-footer-right">
+          <button class="btn btn-ghost" id="btn-cancel-profile">Cancel</button>
+          <button class="btn btn-primary" id="btn-save-profile">Save Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Launch Modal ───────────────────── -->
+  <div class="modal-overlay" id="modal-launch">
+    <div class="modal modal-launch">
+      <div class="launch-header">
+        <span class="launch-emoji" id="launch-emoji">🚀</span>
+        <h2 class="launch-title" id="launch-title">Launching…</h2>
+      </div>
+      <div class="launch-progress-wrap">
+        <div class="launch-progress-bar" id="launch-progress-bar"></div>
+      </div>
+      <div class="launch-apps" id="launch-apps"></div>
+      <div class="launch-footer">
+        <button class="btn btn-ghost" id="btn-launch-close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

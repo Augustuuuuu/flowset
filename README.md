@@ -1,34 +1,42 @@
-# ⚡ Flowset
+# 🚀 Flowset
 
-> Switch context instantly. Launch your apps by profile.
+Desktop app launcher with custom profiles — group your favorite apps and launch them all in one click.
 
-Flowset is a Windows desktop app built with Electron that lets you create
-work profiles and launch all your apps with a single click.
+Built with **Electron** + vanilla HTML/CSS/JS.
 
-## Features
+---
 
-- Create profiles with custom name, emoji and color
-- Add any .exe, .bat or .lnk from your system
-- Launch all apps in a profile in sequence
-- Minimal dark interface
+## Prerequisites
 
-## Tech Stack
+- [Node.js LTS](https://nodejs.org/) (v18+)
 
-- Electron
-- HTML + CSS + JavaScript (vanilla)
-- electron-store
+## Install
 
-## Getting Started
 ```bash
 npm install
+```
+
+## Run (dev)
+
+```bash
 npm start
 ```
 
-## Build
+## Build Windows Installer
+
 ```bash
 npm run build
 ```
 
+The `.exe` installer will be generated in the `dist/` folder.
+
 ---
 
-Made with ⚡ by [you]
+## Features
+
+- Create, edit and delete profiles with name, description, emoji and accent color
+- Add `.exe`, `.bat`, `.lnk`, `.cmd` apps via native file picker
+- Auto-detect emoji icon from app name (Chrome → 🌐, VS Code → 💻, Steam → 🎮, …)
+- Launch all apps in a profile sequentially with animated progress
+- Stats bar tracking total profiles, apps, and launches
+- Dark minimalist UI with smooth animations
