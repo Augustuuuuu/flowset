@@ -53,4 +53,4 @@ Projeto pessoal criado para resolver um problema real do dia a dia: perder tempo
 
 ---
 
-Feito por [Augusto Saboia](https://github.com/Augustuuuuu)
+Feito por [Augusto Saboia](https://www.linkedin.com/in/augustosaboia/)
