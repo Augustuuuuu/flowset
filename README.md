@@ -1,18 +1,40 @@
 # 🚀 Flowset
 
-Desktop app launcher with custom profiles — group your favorite apps and launch them all in one click.
+> Troque de contexto na hora. Abra todos os seus apps com um clique.
 
-Built with **Electron** + vanilla HTML/CSS/JS.
+![Electron](https://img.shields.io/badge/Electron-191970?style=flat&logo=electron&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Windows-blue)
 
----
+Flowset é um app desktop para Windows que permite criar perfis de trabalho e abrir todos os seus programas de uma vez, com um único clique.
 
-## Prerequisites
+Chega de abrir manualmente o VS Code, o Slack, o navegador e o Spotify toda vez que você senta pra trabalhar. Com o Flowset você cria um perfil chamado "Trabalho" e abre tudo de uma vez.
 
-- [Node.js LTS](https://nodejs.org/) (v18+)
+## Como funciona
 
-## Install
+1. Crie um perfil com nome, emoji e cor personalizados
+2. Adicione os aplicativos que você usa naquele contexto (`.exe`, `.bat` ou `.lnk`)
+3. Clique em iniciar — o Flowset abre tudo em sequência
+
+Exemplos de perfis:
+- **Trabalho** — abre o editor de código, cliente de email, Teams e o navegador
+- **Estudos** — abre o Notion, Anki, YouTube e o ambiente de desenvolvimento
+- **Games** — abre a Steam, Discord e fecha os apps desnecessários
+
+## Tecnologias
+
+- **Electron** — framework para apps desktop com JavaScript
+- **HTML + CSS + JavaScript** (vanilla, sem frameworks)
+- **electron-store** — persistência local dos perfis
+
+## Como rodar localmente
+
+Pré-requisitos: Node.js instalado.
 
 ```bash
+git clone https://github.com/Augustuuuuu/flowset.git
+cd flowset
 npm install
 ```
 
@@ -22,21 +44,18 @@ npm install
 npm start
 ```
 
-## Build Windows Installer
+## Como gerar o executável
 
 ```bash
 npm run build
 ```
 
-The `.exe` installer will be generated in the `dist/` folder.
+O executável `.exe` será gerado na pasta `dist/`.
+
+## Motivação
+
+Projeto pessoal criado para resolver um problema real do dia a dia: perder tempo abrindo os mesmos aplicativos repetidamente ao mudar de contexto entre trabalho, estudos e lazer.
 
 ---
 
-## Features
-
-- Create, edit and delete profiles with name, description, emoji and accent color
-- Add `.exe`, `.bat`, `.lnk`, `.cmd` apps via native file picker
-- Auto-detect emoji icon from app name (Chrome → 🌐, VS Code → 💻, Steam → 🎮, …)
-- Launch all apps in a profile sequentially with animated progress
-- Stats bar tracking total profiles, apps, and launches
-- Dark minimalist UI with smooth animations
+Feito por [Augusto Saboia](https://www.linkedin.com/in/augustosaboia/)
